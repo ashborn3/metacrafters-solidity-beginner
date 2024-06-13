@@ -18,6 +18,9 @@ pragma solidity 0.8.18;
 contract MyToken {
 
     // public variables here
+    string public name = "AshToken";
+    string public symbol = "-_-";
+    uint256 public totalSupply;
 
     // mapping variable here
 
