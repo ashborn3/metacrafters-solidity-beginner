@@ -32,5 +32,13 @@ contract MyToken {
     }
 
     // burn function
+    function burn(address from, uint256 amount) public {
+        if (balances[from] < amount) {
+            revert("Insufficient balance");
+        }
+
+        totalSupply -= amount;
+        balances[from] -= amount;
+    }
 
 }
